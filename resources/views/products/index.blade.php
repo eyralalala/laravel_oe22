@@ -31,18 +31,18 @@
         @foreach ($products as $product)
             <tr>
                 <td>{{ $product -> id }}</td>
-                <td>{{ $product -> name }}/td>
-                <td>{{ $product -> description}}<</td>
+                <td>{{ $product -> name }}</td>
+                <td>{{ $product -> description}}</td>
                 <td>{{ $product -> price}}</td>
                 <td>{{ $product -> created_at }}</td>
                 <td>
                     <form action="" method="POST">
 
-                        <a href="" title="show">
+                        <a href=" {{ route('products.show', $product->id) }}" title="show">
                             <i class="fas fa-eye text-success  fa-lg"></i>
                         </a>
 
-                        <a href="">
+                        <a href="{{ route('products.show', $product->id) }}">
                             <i class="fas fa-edit  fa-lg"></i>
                         </a>
 

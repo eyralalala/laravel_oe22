@@ -47,7 +47,17 @@ class ProductController extends Controller
             'price' => 'required'
         ]);
 
-        Product::create($request->all());
+        $product = new Product();
+        $product ->name= $request->name;
+        $product ->description= $request->description;
+        $product ->price = $request->price;
+        $product ->created_at =  $request->created_at;
+
+        $product->save();
+
+
+
+        
 
         return redirect()->route('products.index')
             ->with('success', 'Product created successfully.');
