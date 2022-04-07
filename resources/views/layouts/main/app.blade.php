@@ -20,7 +20,6 @@
 
         <!-- sidebar -->
         
-
         <!-- main -->
         @include('layouts.main.main')
 
