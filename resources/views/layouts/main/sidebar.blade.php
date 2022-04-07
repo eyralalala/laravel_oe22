@@ -71,7 +71,7 @@
             <div class="list-group list-group-flush">
                 <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
                 <a href=" {{url('/products')}}" class="list-group-item list-group-item-action bg-light">Products</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Add Product</a>
+                <a href="{{route('products.create')}}" class="list-group-item list-group-item-action bg-light">Add Product</a>
                 <a href="#" class="list-group-item list-group-item-action bg-light">View</a>
                 <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
             </div>
