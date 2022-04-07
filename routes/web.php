@@ -19,4 +19,8 @@ Route::get('/', function () {
 
 Route::resource('products', ProductController::class);
 
+// Route::get('/index', 'ProductController@index')->name('products.index');
+
+
+
 

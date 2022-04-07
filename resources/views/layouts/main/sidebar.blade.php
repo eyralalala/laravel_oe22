@@ -11,14 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-        })
-    </script>
+    <script src="{{asset('js/app.js')}}"></script>
+    
     <style>
         body {
             overflow-x: hidden;
@@ -70,7 +64,7 @@
 </head>
 
 <body>
-    <div class="d-flex" id="wrapper">
+    <aside class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">LARAVEL OE </div>
@@ -85,7 +79,7 @@
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <button class="btn btn-primary" id="menu-toggle">Menu</button>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -111,16 +105,13 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
-            <div class="container-fluid">
-                <h1 class="mt-4">laravel 7 Simple Sidebar Template</h1>
-                <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-            </div>
+            </nav> -->
+            @yield('content')
         </div>
         <!-- /#page-content-wrapper -->
-    </div>
-    <!-- /#wrapper -->
-</body>
+  
+      
+    </aside>
 
-</html
+</body>
+</html>
