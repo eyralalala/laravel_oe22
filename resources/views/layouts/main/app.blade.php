@@ -1,34 +1,34 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<!doctype html>
+<html lang="{{ str_replace('', '-', app()->getLocale()) }}">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Index - @yield('title')</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @include('layouts.main.shared.style')
+    <!-- Title -->
+    <title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Styles -->
+    @include('layouts.shared.style')
 
 </head>
+    <body class="hold-transition sidebar-mini">
 
-<body>
+        <!-- Wrapper -->
+        <div id="app" class="wrapper">
 
-    <!-- @yield('content') -->
+            <!-- Sidebar -->
+            @include('layouts.main.sidebar')
 
-    <div id="app" class="wrapper">
+            <!-- Main -->
+            @include('layouts.main.main')
 
-        <!-- sidebar -->
-        
-        <!-- main -->
-        @include('layouts.main.main')
+        </div>
 
-    </div>
-
-    @include('layouts.main.shared.script')
-
-    @yield('script')
-
-</body>
-
+        <!-- Scripts -->
+        @include('layouts.shared.script')
+            @yield('script')
+    </body>
 </html>

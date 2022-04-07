@@ -1,8 +1,7 @@
 <div class="content-wrapper">
-    <div class="content-header">
-        @include('layouts.main.sidebar')
-        <!-- <div class="container-fluid">
-           
-        </div> -->
+    <div class="content">
+        <div class="container-fluid">
+            @yield('content')
+        </div>
     </div>
-</div>
+
