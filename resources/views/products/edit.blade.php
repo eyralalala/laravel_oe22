@@ -27,7 +27,7 @@
         </div>
         @endif
 
-        <form action="{{ route('products.update', $product->id) }}" method="POST">
+        <form action="{{ route('products.update', $products->id) }}" method="POST">
 
         @csrf
         @method('PATCH')
@@ -35,19 +35,19 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Name:</strong>
-                        <input type="text" name="name" value="{{$product->name}}" class="form-control" placeholder="Name">
+                        <input type="text" name="name" value="{{$products->name}}" class="form-control" placeholder="Name">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Description</strong>
-                        <input type="text" class="form-control" style="height:50px" name="description" placeholder="description" value="{{$product->description}}">
+                        <input type="text" class="form-control" style="height:50px" name="description" placeholder="description" value="{{$products->description}}">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Price</strong>
-                        <input type="number" name="price" class="form-control" placeholder="Price" value="{{$product->price}}">
+                        <input type="number" name="price" class="form-control" placeholder="Price" value="{{$products->price}}">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">

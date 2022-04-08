@@ -21,6 +21,15 @@ class ProductController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+    // public function welcome()
+    // {
+    //     //
+    //     $products = Product::latest()->paginate(5);
+
+    //     return view('welcome', compact('products'))
+    //         ->with('i', (request()->input('page', 1) - 1) * 5);
+    // }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -47,17 +56,13 @@ class ProductController extends Controller
             'price' => 'required'
         ]);
 
-        $product = new Product();
-        $product ->name= $request->name;
-        $product ->description= $request->description;
-        $product ->price = $request->price;
-        $product ->created_at =  $request->created_at;
+        $products = new Product();
+        $products ->name= $request->name;
+        $products ->description= $request->description;
+        $products ->price = $request->price;
+        $products ->created_at =  $request->created_at;
 
-        $product->save();
-
-
-
-        
+        $products->save();
 
         return redirect()->route('products.index')
             ->with('success', 'Product created successfully.');
@@ -69,10 +74,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Product $products)
     {
         //
-        return view('products.show', compact('product'));
+        return view('products.show', compact('products'));
     }
 
     /**
@@ -81,10 +86,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Product $products)
     {
         //
-        return view('products.edit', compact('product'));
+        return view('products.edit', compact('products'));
     }
 
     /**
@@ -94,16 +99,16 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Product $products)
     {
         //
-        $product ->name= $request->name;
-        $product ->description= $request->description;
-        $product ->price = $request->price;
-        $product ->created_at =  $request->created_at;
-        $product->save();
+        $products ->name= $request->name;
+        $products ->description= $request->description;
+        $products ->price = $request->price;
+        $products ->created_at =  $request->created_at;
+        $products->save();
 
-        return redirect()->route('products.index',compact('product'))
+        return redirect()->route('products.index',compact('products'))
             ->with('success', 'Product updated successfully');
     }
 
@@ -113,10 +118,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Product $products)
     {
         //
-        $product->delete();
+        $products->delete();
 
         return redirect()->route('products.index')
             ->with('success', 'Product deleted successfully');

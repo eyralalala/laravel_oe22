@@ -14,13 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {
-//     return view('products.index');
+//     return view('welcome');
 // });
 
-Route::resource('products', ProductController::class);
+// Route::resource('products', ProductController::class);
 
-// Route::get('/index', 'ProductController@index')->name('products.index');
+// Route::get('/', 'ProductController@welcome')->name('products.welcome');
 
+// // ROUTE PRODUCT
 
-
-
+Route::get('/', 'ProductController@index')->name('products.index');
+Route::get('/create', 'ProductController@create')->name('products.create');
+Route::get('/products/{products}/show', 'ProductController@show')->name('products.show');
+Route::post('/products', 'ProductController@store')->name('products.store');
+Route::get('/products/{products}/edit', 'ProductController@edit')->name('products.edit');
+Route::patch('/products/{products}', 'ProductController@update')->name('products.update');
+Route::delete('/products/{products}', 'ProductController@destroy')->name('products.destroy');
