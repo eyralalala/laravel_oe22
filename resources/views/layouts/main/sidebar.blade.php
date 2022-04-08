@@ -36,15 +36,15 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item"> 
                         
-                            <a href="#" class="nav-link">
+                            <a href="{{route('products.create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                    <p>Top Ten Orders by Sales Amount</p>
+                                    <p>Add Product</p>
                             </a>
                          </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('products.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                    <p>Customer Details</p>
+                                    <p>Product List</p>
                             </a>
                         </li>
                         <li class="nav-item">
