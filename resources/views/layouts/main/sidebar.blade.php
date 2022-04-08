@@ -29,7 +29,7 @@
                     <a href="#" class="nav-link">
                         {{-- <i class="nav-icon fas fa-tachometer-alt"></i> --}}
                          <p>
-                            Customers & Orders
+                           Products
                         <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -67,139 +67,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link">
-                         <p>
-                            Inventory & Purchasing
-                        <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href=" {{ url('/employee') }} " class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Inventory List</p>
-                            </a>
-                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Product Details</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Purchase Order Details</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Purchase Order List</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link">
-                         <p>
-                            Suppliers
-                        <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Supplier Details</p>
-                            </a>
-                         </li>
-                        <li class="nav-item">
-                            <a href="  " class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Supplier Lists</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link">
-                         <p>
-                            Shippers
-                        <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Shipper Details</p>
-                            </a>
-                         </li>
-                        <li class="nav-item">
-                            <a href=" " class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Shipper Lists</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>   
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link">
-                         <p>
-                            Suppliers
-                        <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Supplier Details</p>
-                            </a>
-                         </li>
-                        <li class="nav-item">
-                            <a href="  " class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Supplier Lists</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link">
-                         <p>
-                            Reports
-                        <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Sales Reports</p>
-                            </a>
-                         </li>
-
-                    </ul>
-                </li>
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link">
-                         <p>
-                           Employees
-                        <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href=" " class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                    <p>Employee Details</p>
-                            </a>
-                         </li>
-                    </ul>
-                </li>
+                
                 <li class="nav-item menu-open">
                     <a href="#" class="nav-link">
                          <p>
