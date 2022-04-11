@@ -7,7 +7,7 @@
     }
 </style>
 
-<div class="card uper">
+<!-- <div class="card uper"> -->
     <div class="card-header">
         <h3>Create Post</h3>
     </div>

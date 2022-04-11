@@ -7,43 +7,43 @@
     }
 </style>
 
-<div class="card uper">
-    <div class="card-header">
-        <h3>View Posts</h3>
+<!-- <div class="card uper"> -->
+<div class="card-header">
+    <h3>View Posts</h3>
 
-        <a class="btn btn-primary" href="{{ route('posts.index') }}"> Back</a>
+    <a class="btn btn-primary" href="{{ route('posts.index') }}"> Back</a>
 
-    </div>
-    <div class="card-body">
-        <div class="row">
+</div>
+<div class="card-body">
+    <div class="row">
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12">
 
-                <div class="form-group">
+            <div class="form-group">
 
-                    <strong>Title:</strong>
+                <strong>Title:</strong>
 
-                    {{ $post->title }}
-
-                </div>
+                {{ $post->title }}
 
             </div>
 
+        </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
 
-                <div class="form-group">
+        <div class="col-xs-12 col-sm-12 col-md-12">
 
-                    <strong>Body:</strong>
+            <div class="form-group">
 
-                    {{ $post->body }}
+                <strong>Body:</strong>
 
-                </div>
+                {{ $post->body }}
 
             </div>
 
         </div>
 
     </div>
+
+</div>
 </div>
 @endsection

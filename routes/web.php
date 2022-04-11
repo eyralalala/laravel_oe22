@@ -31,6 +31,6 @@ Route::get('/products/{products}/edit', 'ProductController@edit')->name('product
 Route::patch('/products/{products}', 'ProductController@update')->name('products.update');
 Route::delete('/products/{products}', 'ProductController@destroy')->name('products.destroy');
 
-
+//Route Posts
 Route::resource('posts','PostController');
 
