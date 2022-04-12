@@ -39,6 +39,14 @@ Route::get('customers', function () {
     return view ('internals.customers');
 });
 
-
 Route::get('customers', 'CustomerController@list');
 Route::post('customers','CustomerController@store');
+
+
+//Route Comment
+Route::get('comments', function () {
+    return view ('comments.create');
+});
+
+Route::get('comments', 'CommentController@list');
+Route::post('comments','CommentController@store');
