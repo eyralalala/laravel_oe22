@@ -23,22 +23,44 @@
         @endif
         <form action="comments" method="POST">
             <div class="form-group">
+                <label for="post_id">Post:</label>
+                <select name="post_id" id="post_id">
+                    @foreach ($posts as $post)
+                        <option name="post_id" value="{{ $post->id}}">{{ $post->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
                 @csrf
                 <label for="comment">Comment:</label>
                 <input type="text" class="form-control" name="comment" id="comment" />
             </div>
 
-            <div class="form-group">
-                <label for="post_id">Post:</label>
-                <select name="post_id" id="post_id">
-                    @foreach ($posts as $post)
-                        <option value="{{ $post->id}}">{{ $post->title }}</option>
-                    @endforeach
-                </select>
-            </div>
-
+            
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+
     </div>
+
+    {{-- <div class="row">
+        <div class="col-6">
+
+            @foreach($posts as $post)
+
+            <h3>{{ $post->title }}</h3>
+    
+            <ul>
+                @foreach($comments as $comment)
+    
+                    <li value=" {{ $post->id }} ">{{$comment->comment}} </li>
+    
+                @endforeach   
+            </ul>
+
+            @endforeach
+        </div>
+    </div> --}}
 </div>
 @endsection

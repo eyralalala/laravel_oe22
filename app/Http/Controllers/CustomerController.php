@@ -38,13 +38,15 @@ class CustomerController extends Controller
 
             'name' => 'required',
             'email' => 'required',
-            'active' => 'required'
+            'active' => 'required',
+            'company_id' => 'required'
         ]);
 
         $customer = new Customer();
         $customer->name = request('name');
         $customer->email = request('email');
         $customer->active = request('active');
+        $customer->company_id = request('company_id');
         $customer->save();
 
         return back();

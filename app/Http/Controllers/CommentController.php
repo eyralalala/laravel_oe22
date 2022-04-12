@@ -22,10 +22,12 @@ class CommentController extends Controller
         $data = request()->validate([
 
             'comment' => 'required',  
+            
         ]);
 
         $comment = new Comment();
         $comment->comment = request('comment');
+        $comment->post_id = request('post_id');
        
         $comment->save();
 

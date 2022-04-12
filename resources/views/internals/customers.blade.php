@@ -64,7 +64,7 @@
         <ul>
             @foreach($activeCustomers as $activeCustomer)
 
-                <li>{{ $activeCustomer->name}} <span class="text-muted">({{ $activeCustomer->email}})</li>
+                <li>{{ $activeCustomer->name}} <span class="text-muted">({{ $activeCustomer->company->name}})</li>
 
             @endforeach   
         </ul>
@@ -76,7 +76,8 @@
         <ul>
             @foreach($inactiveCustomers as $inactiveCustomer)
 
-                <li>{{ $inactiveCustomer->name}} <span class="text-muted">({{ $inactiveCustomer->email}})</li>
+           
+                <li>{{ $inactiveCustomer->name}} <span class="text-muted">({{ $inactiveCustomer->company->name}})</li>
 
             @endforeach   
         </ul>

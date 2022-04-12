@@ -35,6 +35,7 @@ Route::delete('/products/{products}', 'ProductController@destroy')->name('produc
 Route::resource('posts','PostController');
 
 
+//Route Customer
 Route::get('customers', function () {
     return view ('internals.customers');
 });
@@ -44,6 +45,8 @@ Route::post('customers','CustomerController@store');
 
 
 //Route Comment
+// Route::get('/create', 'CommentController@list')->name('comments.create');
+
 Route::get('comments', function () {
     return view ('comments.create');
 });
