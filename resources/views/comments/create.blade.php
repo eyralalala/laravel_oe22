@@ -44,23 +44,6 @@
 
     </div>
 
-    {{-- <div class="row">
-        <div class="col-6">
-
-            @foreach($posts as $post)
-
-            <h3>{{ $post->title }}</h3>
-    
-            <ul>
-                @foreach($comments as $comment)
-    
-                    <li value=" {{ $post->id }} ">{{$comment->comment}} </li>
-    
-                @endforeach   
-            </ul>
-
-            @endforeach
-        </div>
-    </div> --}}
+   
 </div>
 @endsection
