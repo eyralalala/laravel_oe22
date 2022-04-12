@@ -34,3 +34,11 @@ Route::delete('/products/{products}', 'ProductController@destroy')->name('produc
 //Route Posts
 Route::resource('posts','PostController');
 
+
+Route::get('customers', function () {
+    return view ('internals.customers');
+});
+
+
+Route::get('customers', 'CustomerController@list');
+Route::post('customers','CustomerController@store');
