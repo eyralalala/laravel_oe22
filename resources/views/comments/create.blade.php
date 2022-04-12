@@ -41,8 +41,25 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-
     </div>
+
+    <div class="row">
+        <div class="col-6">
+
+            @foreach($posts as $post)
+
+            <h3>{{ $post->title }}</h3>
+    
+            <ul>
+                @foreach($post->comments as $comment)
+                    <li>{{ $comment->comment }}</li>
+                @endforeach   
+            </ul>
+
+            @endforeach
+        </div>
+    </div>
+
 
    
 </div>
