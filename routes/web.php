@@ -23,16 +23,16 @@ Route::get('/', function () {
 
 // ROUTE PRODUCT
 
-Route::get('/index', 'ProductController@index')->name('products.index');
-Route::get('/create', 'ProductController@create')->name('products.create');
-Route::get('/products/{products}/show', 'ProductController@show')->name('products.show');
-Route::post('/products', 'ProductController@store')->name('products.store');
-Route::get('/products/{products}/edit', 'ProductController@edit')->name('products.edit');
-Route::patch('/products/{products}', 'ProductController@update')->name('products.update');
-Route::delete('/products/{products}', 'ProductController@destroy')->name('products.destroy');
+Route::get('/index', 'ProductController@index')->name('products.index')->middleware('auth');
+Route::get('/create', 'ProductController@create')->name('products.create')->middleware('auth');
+Route::get('/products/{products}/show', 'ProductController@show')->name('products.show')->middleware('auth');
+Route::post('/products', 'ProductController@store')->name('products.store')->middleware('auth');
+Route::get('/products/{products}/edit', 'ProductController@edit')->name('products.edit')->middleware('auth');
+Route::patch('/products/{products}', 'ProductController@update')->name('products.update')->middleware('auth');
+Route::delete('/products/{products}', 'ProductController@destroy')->name('products.destroy')->middleware('auth');
 
 //Route Posts
-Route::resource('posts','PostController');
+Route::resource('posts','PostController')->middleware('auth');
 
 
 //Route Customer
@@ -40,8 +40,8 @@ Route::get('customers', function () {
     return view ('internals.customers');
 });
 
-Route::get('customers', 'CustomerController@list');
-Route::post('customers','CustomerController@store');
+Route::get('customers', 'CustomerController@list')->middleware('auth');
+Route::post('customers','CustomerController@store')->middleware('auth');
 
 
 //Route Comment
@@ -51,10 +51,10 @@ Route::get('comments', function () {
     return view ('comments.create');
 });
 
-Route::get('comments', 'CommentController@list');
-Route::post('comments','CommentController@store');
+Route::get('comments', 'CommentController@list')->middleware('auth');
+Route::post('comments','CommentController@store')->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
