@@ -37,18 +37,17 @@
                 <input type="text" class="form-control" name="comment" id="comment" />
             </div>
 
-            
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
     </div>
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
 
             @foreach($posts as $post)
 
-            <h3>{{ $post->title }}</h3>
+            <h5>{{ $post->title }}</h5>
     
             <ul>
                 @foreach($post->comments as $comment)

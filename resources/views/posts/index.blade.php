@@ -13,6 +13,8 @@
         <a class="btn btn-primary" href="{{ route('posts.create') }}"> Create New Post</a>
     </div>
 
+    {{-- {{ dd(Auth::user()) }} --}}
+
     <div class="card-body">
         @if(session()->get('success'))
         <div class="alert alert-success">

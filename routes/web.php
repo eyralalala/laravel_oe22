@@ -13,17 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::resource('products', ProductController::class);
 
 // Route::get('/', 'ProductController@welcome')->name('products.welcome');
 
-// // ROUTE PRODUCT
+// ROUTE PRODUCT
 
-Route::get('/', 'ProductController@index')->name('products.index');
+Route::get('/index', 'ProductController@index')->name('products.index');
 Route::get('/create', 'ProductController@create')->name('products.create');
 Route::get('/products/{products}/show', 'ProductController@show')->name('products.show');
 Route::post('/products', 'ProductController@store')->name('products.store');
@@ -53,3 +53,8 @@ Route::get('comments', function () {
 
 Route::get('comments', 'CommentController@list');
 Route::post('comments','CommentController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
